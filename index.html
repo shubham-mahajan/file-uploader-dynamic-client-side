@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>File Uploader</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery.js"></script>
+	<script src="site.js"></script>
+
+</head>
+<body>
+	<input type="file" accept="image/*" name="files[]" id="fileupload"  data-show-caption="true" onchange="loadfiles()" >
+
+	<div class="attachment-list">
+		<table>
+			<thead>
+				<tr>
+					<th><label for="chkall"><input type="checkbox" id="chkall"  onClick="selectall(this)"></label></th>
+					<th>File Name</th>
+					<th>Size</th>
+					<th>Remove</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<th colspan="4" id="no-attachment">No Attachment</th>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th id="rm"><a href="javascript:removeMultipleFiles();">Remove</a></th>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</body>
+</html>
